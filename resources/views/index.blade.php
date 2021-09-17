@@ -59,33 +59,33 @@
       </div>
       <div class="modal-body">
         <form id='csvform' action="{{ route('contact.csv.export') }}" method="POST">
-            @csrf
-            <div class='row mb-3'>
-                <div class="col-md-5">
-                    <label class='h4'>エクスポートの開始日</label>
-                </div>
-                <div class="col-md-2 h2 d-flex justify-content-center align-items-center"></div>
-                <div class="col-md-5">
-                    <label class='h4'>エクスポートの終端日</label>
-                </div>
-            </div>
-            <div class='row mb-3'>
-                <div class="col-md-5">
-                    <input data-provide="datepicker" class="form-control datepicker js-start-date" type="datetime"
-                    placeholder="出力開始日" name="start_date" value="" dusk='datepicker_first'>
-                </div>
-                <div class="col-md-2 h2 d-flex justify-content-center align-items-center">
-                    〜
-                </div>
-                <div class="col-md-5">
-                    <input data-provide="datepicker" class="form-control datepicker js-end-date" type="datetime" placeholder="出力終了日"
-                    name="end_date" value="" dusk='datepicker_last'>
-                </div>
-            </div>
-        <div class="modal-footer">
-            <button data-remodal-action="cancel" class="btn btn-secondary">キャンセル</button>
-            <button type='submit' class="btn btn-primary">ダウンロード</button>
-        </div>
+          @csrf
+          <div class='row mb-3'>
+              <div class="col-md-5">
+                  <label class='h4'>エクスポートの開始日</label>
+              </div>
+              <div class="col-md-2 h2 d-flex justify-content-center align-items-center"></div>
+              <div class="col-md-5">
+                  <label class='h4'>エクスポートの終端日</label>
+              </div>
+          </div>
+          <div class='row mb-3'>
+              <div class="col-md-5">
+                  <input data-provide="datepicker" class="form-control datepicker js-start-date" type="datetime"
+                  placeholder="出力開始日" name="start_date" value="" dusk='datepicker_first'>
+              </div>
+              <div class="col-md-2 h2 d-flex justify-content-center align-items-center">
+                  〜
+              </div>
+              <div class="col-md-5">
+                  <input data-provide="datepicker" class="form-control datepicker js-end-date" type="datetime" placeholder="出力終了日"
+                  name="end_date" value="" dusk='datepicker_last'>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type='submit' class="btn btn-primary">ダウンロード</button>
+              <button data-remodal-action="cancel" class="btn btn-secondary" data-bs-dismiss="modal">キャンセル</button>
+          </div>
         </form>
       </div>
     </div>
